@@ -47,11 +47,6 @@ public class MenuService {
         menuRepository.deleteById(id);
         return record;
     }
-    @Repository
-    public interface MenuRepository extends JpaRepository<Menu, UUID> {
-        Menu findByName(String name);
-        List<Menu> findByCategory(String category);
-    }
 
     public Menu getMenuByName(String name) {
         return menuRepository.findByName(name);
